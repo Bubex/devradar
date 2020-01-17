@@ -16,23 +16,28 @@ module.exports = {
         if (!dev) {
             const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`);
 
-            const { name = login, avatar_url, bio } = apiResponse.data;
+            if (apiResponse) {
 
-            const techsArray = parseStringAsArray(techs);
+                const { name = login, avatar_url, bio } = apiResponse.data;
 
-            const location = {
-                type: 'Point',
-                coordinates: [longitude, latitude]
+                const techsArray = parseStringAsArray(techs);
+
+                const location = {
+                    type: 'Point',
+                    coordinates: [longitude, latitude]
+                }
+
+                dev = await Dev.create({
+                    github_username,
+                    name,
+                    avatar_url,
+                    bio,
+                    techs: techsArray,
+                    location
+                })
+            } else {
+                return response.json({ message: 'Usuário não existe!' })
             }
-
-            dev = await Dev.create({
-                github_username,
-                name,
-                avatar_url,
-                bio,
-                techs: techsArray,
-                location
-            })
         }
 
         return response.json(dev);
