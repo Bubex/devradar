@@ -79,7 +79,15 @@ module.exports = {
         return response.json({ message: 'Atualizando dev...' });
     },
 
-    async destroy() {
+    async delete(request, response) {
+        const { github_username } = request.params;
 
+        let dev = await Dev.findOneAndRemove({ github_username });
+
+        if (!dev) {
+            return response.json({ message: 'Usuário não existe!' });
+        } else {
+            return response.json({ message: 'Usuário deletado com sucesso!' });
+        }
     }
 };
