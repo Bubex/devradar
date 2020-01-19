@@ -10,7 +10,7 @@ const server = http.Server(app);
 
 setupWebsocket(server);
 
-mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-sd1wc.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('INSERIR AQUI CONEXÃO COM BANCO', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
