@@ -9,4 +9,4 @@ O app tem como objetivo listar todos os desenvolvedores cadastrados na plataform
 
 ![Frontend Web](https://i.imgur.com/8E3S5FE.png)
 
-![App Mobile](https://i.imgur.com/8p1lXK8.jpg)
+![App Mobile](https://i.imgur.com/Ul9TEak.jpg)
