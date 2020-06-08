@@ -1,6 +1,6 @@
 # DevRadar
 
-Um aplicativo desenvolvido com Node.js + ReactJS + React Native durante a semana de treinamento Omnistack10, da RocketSeat.
+Um aplicativo desenvolvido com Node.js + ReactJS + React Native.
 
 O app tem como objetivo cadastrar e listar desenvolvedores, com acesso a sua localização e perfil do Github. As principais tecnologias usadas foram Node.js, ReactJS e React Native. Também usamos socket.io para atualização em tempo real.
 
